@@ -2,7 +2,7 @@
 
 using Codealong;
 
-var race = new Race(1000,3);
+var race = new Race(1000, 3);
 var horse1 = new Horse(20);
 var horse2 = new Horse(30);
 var horse3 = new Horse(45);

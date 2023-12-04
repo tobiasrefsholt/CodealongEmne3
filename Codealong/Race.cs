@@ -2,9 +2,9 @@ namespace Codealong;
 
 public class Race
 {
-    private List<Horse> _horses = new List<Horse>();
-    private int _rounds;
-    private int _roundLength;
+    private readonly List<Horse> _horses = new List<Horse>();
+    private readonly int _rounds;
+    private readonly int _roundLength;
 
     public Race(int roundLength, int rounds)
     {
@@ -17,8 +17,9 @@ public class Race
         _horses.Add(horse);
     }
 
-    private void NewRound()
+    private void NewRound(int round)
     {
+        Console.WriteLine("Runde " + round);
         foreach (var horse in _horses)
         {
             Console.WriteLine(horse.GetRoundTime(_roundLength));
@@ -27,15 +28,11 @@ public class Race
 
     public void Start()
     {
-        for (int round = 0; round < _rounds; round++)
+        for (var round = 0; round < _rounds; round++)
         {
-            NewRound();
+            NewRound(round + 1);
         }
 
-        /*foreach (var horse in _horses)
-        {
-            horse.GetTotalTime();
-        }*/
         Console.WriteLine("Løpet er ferdig.");
     }
 }

@@ -1,5 +1,3 @@
-using System.Net.NetworkInformation;
-
 namespace Codealong;
 
 public class Horse
@@ -28,5 +26,4 @@ public class Horse
         _totalTime += time;
         return _totalTime;
     }
-    
 }
